@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '../components/Layout';
 
-export default function About() {
+export default function Companys() {
   return (
     <Layout>
-      <div>Om oss</div>
+      <div>Företag</div>
     </Layout>
   );
 }
