@@ -1,13 +1,26 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import Navbar from './Navbar';
 import '../styles/global.css';
 
 export default function Layout({ children }) {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          copyright
+        }
+      }
+    }
+  `);
+
+  const { copyright } = data.site.siteMetadata;
+
   return (
     <div className="layout">
       <Navbar />
       <div className="content">{children}</div>
-      <footer>Copyright 2024 Jennifer Bunner</footer>
+      <footer>{copyright}</footer>
     </div>
   );
 }

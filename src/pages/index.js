@@ -1,24 +1,36 @@
 import * as React from 'react';
 import Layout from '../components/Layout';
 import * as styles from '../styles/home.module.css';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
-export default function Home() {
+export default function Home({ data }) {
+  const { title, description } = data.site.siteMetadata;
+
   return (
     <Layout>
       <section className={styles.header}>
-        <div>
-          <h2>Ren & Fino</h2>
-          <h3>Städfirma</h3>
-          <p>lorem ipsum dkgsjdgjsdfgjsldfkjgbfhb fdkgbdlfknghb</p>
+        <h2>{title}</h2>
+        <p>{description}</p>
+        <div className={styles.btns}>
           <Link className={styles.btn} to="/private">
-            Privat
+            Företagsstädning
           </Link>
           <Link className={styles.btn} to="/companys">
-            Företag
+            Privatstädning
           </Link>
         </div>
       </section>
     </Layout>
   );
 }
+
+export const query = graphql`
+  query SiteInfo {
+    site {
+      siteMetadata {
+        description
+        title
+      }
+    }
+  }
+`;
