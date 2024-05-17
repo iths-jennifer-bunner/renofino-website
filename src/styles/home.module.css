@@ -6,9 +6,16 @@
 }
 .header h2 {
   text-transform: uppercase;
+  font-size: 4em;
+  font-family: 'Baskervville', serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .header p {
   margin-bottom: 20px;
+  font-family: 'Baskervville', serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .btn {
   display: inline-block;
@@ -22,8 +29,63 @@
 }
 
 .bts {
+  font-family: 'muli', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.presentation {
+  display: flex;
+  flex-direction: row;
+}
+.presentation h2,
+.presentation h3 {
+  text-transform: uppercase;
+  color: #4c868f;
+}
+.about {
+  display: flex;
+  flex-direction: row;
+}
+.aboutSection {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.aboutSection a {
+  color: #000000;
+}
+.aboutSection h3 {
+  color: #4c868f;
+}
+.about Link {
+  text-transform: capitalize;
+}
+.linkSection {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+.linkSection Link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.companys {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.companys h3 {
+  color: #4c868f;
+}
+.imageSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

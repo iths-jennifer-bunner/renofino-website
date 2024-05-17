@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+@import url('https://use.typekit.net/gsy5aak.css');
+/* ev byt till google samt kika på import av font 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+ex) font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
 
 * {
   margin: 0;
@@ -19,9 +27,14 @@ body {
   );
   background-repeat: no-repeat; */
 }
-p {
+p,
+h4 {
   margin: 16px auto;
   line-height: 1.5em;
+  color: #000000;
+  font-family: 'muli', sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 /* layout & nav */
@@ -43,9 +56,12 @@ nav .links {
 nav a {
   display: inline-block;
   margin-left: 20px;
-  font-weight: 400;
+  font-family: 'muli', sans-serif;
+  font-weight: 300;
+  font-style: normal;
   padding-bottom: 8px;
   border-bottom: 3px solid transparent;
+  color: #4c868f;
 }
 nav a:hover {
   border-color: #4c868f;
@@ -54,4 +70,8 @@ footer p {
   text-align: center;
   color: #bbb;
   margin: 40px auto;
+}
+hr {
+  border-top: 2px solid #4c868f;
+  width: 220px;
 }
