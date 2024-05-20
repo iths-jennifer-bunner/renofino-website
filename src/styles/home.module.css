@@ -24,11 +24,13 @@
   padding: 10px 16px;
   border-radius: 10px;
   margin: 10px 20px;
+  font-family: 'muli', sans-serif;
   font-weight: 500;
+  font-style: normal;
   text-transform: uppercase;
 }
 
-.bts {
+.btns {
   font-family: 'muli', sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -79,13 +81,31 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-direction: column;
 }
-.companys h3 {
+.companys h3,
+.testimonials h3 {
   color: #4c868f;
+  text-transform: uppercase;
+}
+.companys h4,
+.testimonials h4 {
+  text-transform: uppercase;
 }
 .imageSection {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.map,
+.faq {
+  display: flex;
 }

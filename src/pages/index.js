@@ -67,14 +67,16 @@ export default function Home({ data }) {
             </p>
           </div>
           <div className={styles.linkSection}>
-            <Link to="/about">Om Ren och Fino</Link>
+            <Link to="/about">
+              <h3>Om Ren och Fino</h3>
+            </Link>
             <Link to="/about">...arrow image</Link>
           </div>
         </div>
       </section>
-      <section className={styles.companys}>
+      <section>
         {/* gör om till en component */}
-        <div>
+        <div className={styles.companys}>
           <h4>Företag</h4>
           <h3>Bra arbetsmiljö på jobbet</h3>
           <p>Vår ambition är att skapa en bättre arbetsmiljö för företaget</p>
@@ -89,9 +91,9 @@ export default function Home({ data }) {
         <p>image section</p>
         <hr />
       </section>
-      <section className={styles.companys}>
+      <section>
         {/* gör om till en component */}
-        <div>
+        <div className={styles.companys}>
           <h4>Företag</h4>
           <h3>Bra arbetsmiljö på jobbet</h3>
           <p>Vår ambition är att skapa en bättre arbetsmiljö för företaget</p>
@@ -103,11 +105,38 @@ export default function Home({ data }) {
         </div>
       </section>
       <section className={styles.testimonials}>
-        <h4>Företag</h4>
-        <h3>Bra arbetsmiljö på jobbet</h3>
+        <h4>Omdöme</h4>
+        <h3>Kundomdömen</h3>
         <p>Vår ambition är att skapa en bättre arbetsmiljö för företaget</p>
         <div>
-          <p>reco testimonials</p>
+          <p>....reco testimonials....</p>
+        </div>
+      </section>
+      <section className={styles.map}>
+        <div>
+          <h3>Stockholm</h3>
+          <p>Vi åtager oss uppdrag för företag och privat inom detta område</p>
+          <Link className={styles.btn} to="/">
+            Offert inom 24h
+          </Link>
+        </div>
+        <div>
+          <p>....map....</p>
+        </div>
+      </section>
+      <section className={styles.faq}>
+        <div>
+          <p>....image....</p>
+        </div>
+        <div>
+          <h4>FAQ</h4>
+          <h3>Vad våra kunder vill veta</h3>
+          <p>
+            Dagens kunder är allt mer medvetna och ställer krav på fler saker än
+            bara få en tjänst utförd. Här följer svar på frågor vi ofta får av
+            privatpersoner och företag innan de beslutar sig för att bli vår
+            kund.
+          </p>
         </div>
       </section>
     </Layout>

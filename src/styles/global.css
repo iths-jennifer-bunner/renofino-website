@@ -48,10 +48,12 @@ nav {
   align-items: center;
   margin: 40px auto;
 }
-nav .links {
+nav .links,
+section .footerLinks {
   display: inline-block;
   text-align: right;
 }
+
 nav a {
   display: inline-block;
   margin-left: 20px;
@@ -65,10 +67,31 @@ nav a {
 nav a:hover {
   border-color: #4c868f;
 }
-footer p {
-  text-align: center;
-  color: #bbb;
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 40px auto;
+}
+.footerLinks p {
+  display: inline-block;
+  margin-left: 20px;
+  font-family: 'muli', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.footerLinks a {
+  display: inline-block;
+  margin-left: 20px;
+  font-family: 'muli', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 hr {
   border-top: 2px solid #4c868f;
