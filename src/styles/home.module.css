@@ -109,3 +109,7 @@
 .faq {
   display: flex;
 }
+.imageDiv {
+  width: 50vw;
+  height: auto;
+}

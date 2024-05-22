@@ -2,9 +2,11 @@ import * as React from 'react';
 import Layout from '../components/Layout';
 import * as styles from '../styles/home.module.css';
 import { Link, graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 export default function Home({ data }) {
   const { title, description } = data.site.siteMetadata;
+  const teamImage = getImage(data.file.childImageSharp.gatsbyImageData);
 
   return (
     <Layout>
@@ -37,7 +39,9 @@ export default function Home({ data }) {
             Privatstädning
           </Link>
         </div>
-        <div style={{ color: '#000000' }}>image here...</div>
+        <div className={styles.imageDiv}>
+          <GatsbyImage image={teamImage} alt="three of the team" />
+        </div>
       </section>
       <section className={styles.about}>
         <div style={{ color: '#000000' }}>image here ...</div>
@@ -147,9 +151,32 @@ export const query = graphql`
   query SiteInfo {
     site {
       siteMetadata {
-        description
         title
+        description
+      }
+    }
+    file(relativePath: { eq: "huvudsida-1024x683.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          formats: [AUTO, WEBP]
+          placeholder: BLURRED
+        )
       }
     }
   }
 `;
+
+// export const query = graphql`
+//   query HeaderImage {
+//     file(relativePath: { eq: "huvudsida-1024x683.jpg" }) {
+//       childImageSharp {
+//         gatsbyImageData(
+//           layout: FULL_WIDTH
+//           placeholder: BLURRED
+//           formats: [AUTO, WEBP]
+//         )
+//       }
+//     }
+//   }
+// `;
