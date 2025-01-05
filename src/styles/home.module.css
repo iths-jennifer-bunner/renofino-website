@@ -1,86 +1,8 @@
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-image: url(../images/header-img.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  margin-bottom: 10em;
-}
-.header h2 {
-  text-transform: uppercase;
-  font-size: 4em;
-  font-family: 'Baskervville', serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.header p {
-  margin-bottom: 20px;
-  font-family: 'Baskervville', serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.btn {
-  display: inline-block;
-  color: #fff;
-  background: #4c868f;
-  padding: 10px 16px;
-  border-radius: 10px;
-  margin: 10px 20px;
-  font-family: 'muli', sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  text-transform: uppercase;
+
+.indexWrapper{
+  padding: 0 4rem;
 }
 
-.btns {
-  font-family: 'muli', sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  text-transform: uppercase;
-}
-.presentation {
-  display: flex;
-  flex-direction: row;
-}
-.presentation h2,
-.presentation h3 {
-  text-transform: uppercase;
-  color: #4c868f;
-}
-.about {
-  display: flex;
-  flex-direction: row;
-}
-.aboutSection {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.aboutSection a {
-  color: #000000;
-}
-.aboutSection h3 {
-  color: #4c868f;
-}
-.about Link {
-  text-transform: capitalize;
-}
-.linkSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.linkSection Link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
 .companys {
   display: flex;
   justify-content: center;
@@ -109,12 +31,40 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
+  background-image: url(../images/image12.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
 }
 .map,
 .faq {
   display: flex;
 }
 .imageDiv {
-  width: 50vw;
+  width: 10vw;
   height: auto;
+}
+.gatsbyImages {
+  width: 10vw;
+  height: auto;
+}
+.images {
+  display: flex;
+  flex-direction: row;
+}
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-20px); /* Moves up */
+  }
+  60% {
+    transform: translateY(10px); /* Moves down past the starting point */
+  }
+}
+.iconBounce {
+  animation: moveUpDown 3s ease-in-out 5s 3;
+  animation-fill-mode: both; /* Ensures the animation stays at the end state when completed */
 }

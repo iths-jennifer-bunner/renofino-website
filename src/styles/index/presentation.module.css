@@ -1,0 +1,83 @@
+.presentationWrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5rem;
+  align-items: center;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+.padding {
+  padding-right: 2rem;
+}
+.presentation h2,
+.presentation h3 {
+  text-transform: uppercase;
+  color: #4c868f;
+}
+
+.presentation h3 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.presentation h2 {
+  font-size: 2.875rem;
+  padding-bottom: 1rem;
+  line-height: 118.75%;
+}
+p {
+  padding-bottom: 2rem;
+}
+.presentationBtnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+
+}
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background: #4c868f;
+  padding: 12px 16px;
+  border-radius: 50px;
+  font-family: 'muli', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.imageDiv {
+  width: 40%;
+  overflow: hidden;
+  /* padding-left: 2rem; */
+}
+
+@media (max-width: 768px) {
+  .presentationWrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+  }
+  .presentation {
+    padding-right: 0;
+  }
+
+  .presentationBtnContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .imageDiv {
+    margin-top: 20px;
+  }
+}

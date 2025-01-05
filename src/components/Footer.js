@@ -1,4 +1,12 @@
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faPhone,
+  faGlobe,
+  faEnvelope,
+  faMapMarkerAlt,
+} from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 
 export default function Footer() {
@@ -9,26 +17,43 @@ export default function Footer() {
           copyright
         }
       }
+      file(relativePath: { eq: "image9.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FIXED, width: 100)
+        }
+      }
     }
   `);
 
   const { copyright } = data.site.siteMetadata;
+  const logoImage = getImage(data.file);
 
   return (
     <footer>
       <section className="logo">
         <div>
-          <p>..logo..</p>
+          <GatsbyImage image={logoImage} alt="Logo" 
+
+            
+          />
           <p>
             Vi är städfirman med målsättningen att skapa livskvalitet med
             professionell städservice
           </p>
         </div>
         <div>
-          <p>tel</p>
-          <p>web</p>
-          <p>email</p>
-          <p>adress</p>
+          <p>
+            <FontAwesomeIcon icon={faPhone} /> tel
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faGlobe} /> web
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faEnvelope} /> email
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faMapMarkerAlt} /> adress
+          </p>
         </div>
       </section>
       <section>

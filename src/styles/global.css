@@ -13,7 +13,6 @@ ex) font-family: "Mulish", sans-serif;
   padding: 0;
   text-decoration: none;
   font-family: 'Montserrat';
-  color: #4c868f;
 }
 html,
 body {
@@ -27,6 +26,10 @@ body {
   );
   background-repeat: no-repeat; */
 }
+h2,
+h3 {
+  color: #4c868f;
+}
 p,
 h4 {
   margin: 16px auto;
@@ -36,37 +39,88 @@ h4 {
   font-weight: 300;
   font-style: normal;
 }
-
+p {
+  font-size: 0.875rem;
+}
 /* layout & nav */
 .layout {
   /* max-width: 1200px; */
   margin: 0 auto;
 }
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px auto;
-}
-nav .links,
-section .footerLinks {
-  display: inline-block;
-  text-align: right;
-}
 
 nav a {
-  display: inline-block;
-  margin-left: 20px;
+  margin-left: 60px;
   font-family: 'muli', sans-serif;
   font-weight: 300;
   font-style: normal;
-  padding-bottom: 8px;
+  font-size: 0.875rem;
+  /* padding-bottom: 8px; */
   border-bottom: 3px solid transparent;
   color: #4c868f;
+}
+
+nav a:first-child {
+  margin-left: 0;
 }
 nav a:hover {
   border-color: #4c868f;
 }
+.sticky {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffff;
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Ensure the navbar is above other content */
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  margin: 20px auto;
+  position: static;
+}
+.links.active {
+  display: flex;
+}
+.nav-toggle {
+  display: none;
+}
+@media (max-width: 768px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute; /* Ensure it doesn't affect layout */
+    top: 100%;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 10;
+    background-color: white;
+    margin: 0;
+  }
+  .nav-toggle {
+    display: block;
+    z-index: 15;
+    all: unset;
+    /* display: inline-block;  */
+    color: #4c868f;
+    font-size: 2rem;
+  }
+  .sticky {
+    padding: 10px 0 0  10px ;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  nav a {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
 .footerLinks {
   display: flex;
   justify-content: center;
@@ -75,7 +129,7 @@ nav a:hover {
 }
 .footerLinks p {
   display: inline-block;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   font-family: 'muli', sans-serif;
   font-weight: 300;
   font-style: normal;
@@ -96,4 +150,27 @@ nav a:hover {
 hr {
   border-top: 2px solid #4c868f;
   width: 220px;
+}
+footer {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: #4c868f;
+  padding: 40px;
+}
+footer p,
+a {
+  color: #ffff;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 75%;
+  }
 }
